@@ -1,0 +1,148 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" MinHeight="320" MinWidth="240" Height="320" Width="240" Icon="cPic.ico">
+    <Window.Resources>
+        <RoutedUICommand x:Key="cmd0"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmd1"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmd2"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmd3"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmd4"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmd5"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmd6"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmd7"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmd8"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmd9"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdDivision"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdMultiplication"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdSubtraction"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdAddition"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdEquation"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdDot"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdSquareRoot"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdClearEntry"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdNegative"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdFullScreen"></RoutedUICommand>
+        <RoutedUICommand x:Key="cmdCloseApplication"></RoutedUICommand>
+
+
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource cmd0}" Executed="ZeroClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmd1}" Executed="OneClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmd2}" Executed="TwoClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmd3}" Executed="ThreeClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmd4}" Executed="FourClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmd5}" Executed="FiveClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmd6}" Executed="SixClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmd7}" Executed="SevenClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmd8}" Executed="EightClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmd9}" Executed="NineClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmdDivision}" Executed="Division"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmdMultiplication}" Executed="Multiplication"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmdSubtraction}" Executed="Subtraction"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmdAddition}" Executed="Addition"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmdEquation}" Executed="Equation"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmdDot}" Executed="DotClick"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmdSquareRoot}" Executed="SquareRoot"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmdClearEntry}" Executed="ClearEntry"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmdCloseApplication}" Executed="CloseCommandHandler"></CommandBinding>
+        <CommandBinding Command="{StaticResource cmdFullScreen}" Executed="MaximizedScreenHandler"></CommandBinding>
+        <CommandBinding Command= "{StaticResource cmdNegative}" Executed="NegativeClick"></CommandBinding>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="NumPad0" Command ="{StaticResource cmd0}"  />
+        <KeyBinding Key="NumPad1" Command ="{StaticResource cmd1}"  />
+        <KeyBinding Key="NumPad2" Command ="{StaticResource cmd2}"  />
+        <KeyBinding Key="NumPad3" Command ="{StaticResource cmd3}"  />
+        <KeyBinding Key="NumPad4" Command ="{StaticResource cmd4}"  />
+        <KeyBinding Key="NumPad5" Command ="{StaticResource cmd5}"  />
+        <KeyBinding Key="NumPad6" Command ="{StaticResource cmd6}"  />
+        <KeyBinding Key="NumPad7" Command ="{StaticResource cmd7}"  />
+        <KeyBinding Key="NumPad8" Command ="{StaticResource cmd8}"  />
+        <KeyBinding Key="NumPad9" Command ="{StaticResource cmd9}"  />
+
+        <KeyBinding Key="Return" Command ="{StaticResource cmdEquation}"  /> 
+        <KeyBinding Key="Divide" Command ="{StaticResource cmdDivision}"  />
+        <KeyBinding Key="Multiply" Command ="{StaticResource cmdMultiplication}"  />
+        <KeyBinding Key="Decimal" Command ="{StaticResource cmdDot}"  />
+        <KeyBinding Key="Add" Command ="{StaticResource cmdAddition}"  />
+        <KeyBinding Key="Backspace" Command ="{StaticResource cmdClearEntry}"  />
+        <KeyBinding Key="Decimal" Modifiers="Ctrl" Command ="{StaticResource cmdClearEntry}"  />
+
+        <KeyBinding Key="Divide" Modifiers="Ctrl" Command ="{StaticResource cmdSquareRoot}"  />
+        <KeyBinding Key="Subtract" Command ="{StaticResource cmdSubtraction}"  />
+        <KeyBinding Key="Subtract" Modifiers="Ctrl" Command ="{StaticResource cmdNegative}"  />
+
+        <KeyBinding Key="Q" Command="{StaticResource cmdCloseApplication}"></KeyBinding>
+        <KeyBinding Key="W" Modifiers="Ctrl" Command="{StaticResource cmdCloseApplication}"></KeyBinding>
+        <KeyBinding Key="F" Command="{StaticResource cmdFullScreen}"></KeyBinding>
+
+
+        <KeyBinding Key="D0" Command ="{StaticResource cmd0}"  />
+        <KeyBinding Key="D1" Command ="{StaticResource cmd1}"  />
+        <KeyBinding Key="D2" Command ="{StaticResource cmd2}"  />
+        <KeyBinding Key="D3" Command ="{StaticResource cmd3}"  />
+        <KeyBinding Key="D4" Command ="{StaticResource cmd4}"  />
+        <KeyBinding Key="D5" Command ="{StaticResource cmd5}"  />
+        <KeyBinding Key="D6" Command ="{StaticResource cmd6}"  />
+        <KeyBinding Key="D7" Command ="{StaticResource cmd7}"  />
+        <KeyBinding Key="D8" Command ="{StaticResource cmd8}"  />
+        <KeyBinding Key="D9" Command ="{StaticResource cmd9}"  />
+               
+        <KeyBinding Key="OemQuestion" Command ="{StaticResource cmdDivision}"  />
+        <KeyBinding Key="D8" Modifiers="Shift" Command ="{StaticResource cmdMultiplication}"  />
+        <KeyBinding Key= "OemPeriod" Command ="{StaticResource cmdDot}"  />
+        <KeyBinding Key="Return"  Modifiers="Shift" Command ="{StaticResource cmdAddition}"  />
+        <KeyBinding Key="OemMinus" Command ="{StaticResource cmdSubtraction}"  />
+        <KeyBinding Key="OemQuestion" Modifiers="Shift" Command ="{StaticResource cmdSquareRoot}"  />
+        <KeyBinding Key="OemMinus"  Modifiers="Shift" Command ="{StaticResource cmdNegative}"  />
+
+
+
+    </Window.InputBindings>
+    <Grid Background="#1F1C1F" ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4" Stretch="Fill">
+            <TextBox x:Name="InputField" IsReadOnly="True" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#A2B077" TextAlignment="Left" Margin="5" BorderThickness="0" FontFamily="Trebuchet MS" Text="          " ></TextBox>
+        </Viewbox>
+        <Button Content = "CE"  Grid.Row="2" Grid.Column="0" Margin="6" FontSize="18" Foreground="#FDFFFF" Background="#130E10" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="ClearEntry"></Button>
+        <Button Content = "√" Grid.Row="2" Grid.Column="1" Margin="6" FontSize="18" Foreground="#FDFFFF" Background="#130E10" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="SquareRoot"></Button>
+        <Button Content = "÷" Grid.Row="2" Grid.Column="2" Margin="6" FontSize="18"  Foreground="#FDFFFF" Background="#130E10" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="Division"></Button>
+        <Button Content = "X" Grid.Row="2" Grid.Column="3" Margin="6" FontSize="18"  Foreground="#FDFFFF" Background="#130E10" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="Multiplication"></Button>
+        <Button Content = "7" Grid.Row="3" Grid.Column="0" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="SevenClick"></Button>
+        <Button Content = "8" Grid.Row="3" Grid.Column="1" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="EightClick" ></Button>
+        <Button Content = "9" Grid.Row="3" Grid.Column="2" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="NineClick"></Button>
+        <Button Content = "─" Grid.Row="3" Grid.Column="3" Margin="6" FontSize="18" Background="#130E10" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="Subtraction"></Button>
+        <Button Content = "4" Grid.Row="4" Grid.Column="0" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="FourClick"></Button>
+        <Button Content = "5" Grid.Row="4" Grid.Column="1" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="FiveClick"></Button>
+        <Button Content = "6" Grid.Row="4" Grid.Column="2" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="SixClick"></Button>
+        <Button Content = "+" Grid.Row="4" Grid.Column="3" Margin="6" FontSize="18" Background="#130E10" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="Addition" ></Button>
+        <Button Content = "1" Grid.Row="5" Grid.Column="0" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="OneClick"></Button>
+        <Button Content = "2" Grid.Row="5" Grid.Column="1" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="TwoClick"></Button>
+        <Button Content = "3" Grid.Row="5" Grid.Column="2" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="ThreeClick"></Button>
+        <Button Content = "=" Grid.Row="5" Grid.Column="3" Grid.RowSpan="2" Margin="6" FontSize="18" Background="#F05B2A" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="Equation"></Button>
+        <Button Content = "0" Grid.Row="6" Grid.Column="0" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="ZeroClick"></Button>
+        <Button Content = "-" Grid.Row="6" Grid.Column="2" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="NegativeClick"></Button>
+        <Button Content = "." Grid.Row="6" Grid.Column="1" Margin="6" FontSize="18" Background="#57595B" Foreground="#FDFFFF" BorderBrush="Transparent" BorderThickness="0" FontFamily="Trebuchet MS" Click="DotClick"></Button>
+    </Grid>
+
+</Window>
