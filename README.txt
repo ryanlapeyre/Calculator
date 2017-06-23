@@ -1,11 +1,3 @@
-Ryan Lapeyre
-        
-IT 4400
-       
-Calculator Program
-      
-Assignment3
-Bonus Included
 
 Additional Features
 * Resizable Interface that Scales 
