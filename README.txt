@@ -1,5 +1,5 @@
 
-Additional Features
+Features
 * Resizable Interface that Scales 
 * Equal Button Performs Last Equation 
 * Decimal Input
@@ -24,6 +24,3 @@ Keybinds
 * Decimal Button : Period on Keyboard, Decimal on NumPad
 * Negative Button : Shift + Minus Key, CTRL + Minus on NumPad  (-)
 * Quit Button : Q, CTRL + W
-
-Bonus Included
-* Negative Floating Point Numbers are Handled
